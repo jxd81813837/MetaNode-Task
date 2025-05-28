@@ -1,13 +1,73 @@
-package go_base
+package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
-	strs := []string{"flower", "flo", "floght"}
-	fmt.Println(longesCommonPrefix(strs))
 
+	fmt.Println(towSum([]int{2, 7, 11, 12, 15}, 23))
+}
+
+func towSum(nums []int, target int) []int {
+	sort.Ints(nums) //对数组进行排序
+	for i := len(nums) / 2; i > 0 || i < len(nums); {
+		if nums[i]+nums[i-1] > target {
+			i /= 2
+		} else if nums[i]+nums[i-1] < target {
+			i = i + i/2
+		} else if nums[i]+nums[i-1] == target {
+			return []int{nums[i], nums[i-1]}
+		} else if nums[i]+nums[i+1] == target {
+			return []int{nums[i], nums[i+1]}
+		}
+	}
+	return []int{}
+}
+
+func mergeIntervals(intervals [][]int) [][]int {
+	intervalsResult := [][]int{}
+	for i := 0; i < len(intervals)-1; i++ {
+		first := intervals[i][1]  //取出前一个元素最后一个
+		last := intervals[i+1][0] //取出后一个元素第一个
+		if first >= last {
+			arr := []int{intervals[i][0], intervals[i+1][1]}
+			intervalsResult = append(intervalsResult, arr)
+		}
+	}
+	return intervalsResult
+}
+
+func plusOne(nums []int) []int {
+	for i := len(nums) - 1; i >= 0; i-- {
+		if nums[i] < 9 {
+			nums[i]++
+			return nums
+		}
+		nums[i] = 0
+		if i == 0 {
+			return append([]int{1}, nums...)
+		}
+	}
+	return nums
+}
+
+// 输出 删除排序数组中的重复项
+func removeDuplicates(nums []int) (int, []int) {
+	resultInt := []int{}
+	resultCount := 0
+	resultInt = append(resultInt, nums[0]) //把第一个元素追加进去
+	for i := 1; i < len(nums); i++ {
+		countTemp := nums[i]
+		for j := resultCount; j < len(resultInt); j++ {
+			if countTemp != resultInt[j] {
+				resultInt = append(resultInt, countTemp) //把第一个元素追加进去
+				resultCount++
+			}
+		}
+	}
+	return len(resultInt), resultInt
 }
 
 // 最长公共前缀
@@ -24,7 +84,7 @@ outerLoop:
 			if i >= len(strs[j]) {
 				break outerLoop
 			}
-			if !longesCommonPrefixChar(strs[j], i, byteCh) {
+			if strs[j][i] != byteCh { //从字符串strs中获取第j个的第i个字符返回码点
 				flat = false
 				break outerLoop
 			}
@@ -86,12 +146,4 @@ func arrGetOne(arr []int) []int {
 		}
 	}
 	return resultArr
-}
-
-func longesCommonPrefixChar(targe string, targeIndex int, ch byte) bool {
-	bytes := []byte(targe)
-	if bytes[targeIndex] == ch {
-		return true
-	}
-	return false
 }
