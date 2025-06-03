@@ -208,3 +208,39 @@ response:
 "UpdateTime": "2025-06-03T14:57:47+08:00"
 }
 ]
+
+表结构sql
+
+create table ajxd_post
+(
+id          int(50) auto_increment comment '编号'
+primary key,
+author_id   int          null,
+title       varchar(255) null,
+data        text         null,
+create_time datetime     null,
+update_time datetime     null
+)
+
+
+create table ajxd_user
+(
+id          int auto_increment
+primary key,
+name        varchar(255) null,
+user_name   varchar(255) null,
+Password    varchar(255) null,
+create_time datetime     null,
+update_time datetime     null
+);
+
+create table ajxd_comment
+(
+id          int auto_increment
+primary key,
+author_id   int          null,
+post_id     int          null,
+remake      varchar(256) null,
+create_time datetime     null,
+update_time datetime     null
+);
