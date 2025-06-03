@@ -1,4 +1,4 @@
-package 指针
+package Pointer
 
 import (
 	"fmt"
