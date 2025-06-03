@@ -212,7 +212,7 @@ func GetCommentMax(db *gorm.DB) (Post, error) {
 }
 
 func InitDbgGorm() *gorm.DB {
-	dsn := "admin:yixin_admin@tcp(10.10.201.89:3306)/dsc?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "admin:test@tcp(·127.0.0.1:3306)/dsc?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")

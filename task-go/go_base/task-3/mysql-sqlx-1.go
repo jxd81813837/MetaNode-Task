@@ -28,7 +28,7 @@ func main_sqlx1() {
 }
 
 func initDbSqlx() *sqlx.DB {
-	dsn := "admin:yixin_admin@tcp(10.10.201.89:3306)/dsc?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "admin:test@tcp(127.0.0.1:3306)/dsc?charset=utf8mb4&parseTime=True&loc=Local"
 	// 连接数据库
 	db, err := sqlx.Connect("mysql", dsn)
 	if err != nil {
