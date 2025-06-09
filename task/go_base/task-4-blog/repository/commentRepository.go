@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/config"
-	"MetaNode-Task/task-go/go_base/task-4-blog/models"
+	"MetaNode-Task/task/go_base/task-4-blog/config"
+	"MetaNode-Task/task/go_base/task-4-blog/models"
 	"gorm.io/gorm"
 )
 

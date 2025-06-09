@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/models"
-	"MetaNode-Task/task-go/go_base/task-4-blog/repository"
+	"MetaNode-Task/task/go_base/task-4-blog/models"
+	"MetaNode-Task/task/go_base/task-4-blog/repository"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

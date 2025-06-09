@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/models"
+	"MetaNode-Task/task/go_base/task-4-blog/models"
 	"github.com/dgrijalva/jwt-go"
 	"time"
 )

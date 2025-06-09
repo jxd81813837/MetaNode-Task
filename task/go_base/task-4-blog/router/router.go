@@ -1,8 +1,8 @@
 package router
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/controller"
-	"MetaNode-Task/task-go/go_base/task-4-blog/middleware"
+	"MetaNode-Task/task/go_base/task-4-blog/controller"
+	"MetaNode-Task/task/go_base/task-4-blog/middleware"
 	"github.com/gin-gonic/gin"
 )
 

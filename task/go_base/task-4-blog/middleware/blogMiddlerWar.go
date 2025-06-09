@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/config"
-	"MetaNode-Task/task-go/go_base/task-4-blog/models"
-	"MetaNode-Task/task-go/go_base/task-4-blog/repository"
+	"MetaNode-Task/task/go_base/task-4-blog/config"
+	"MetaNode-Task/task/go_base/task-4-blog/models"
+	"MetaNode-Task/task/go_base/task-4-blog/repository"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

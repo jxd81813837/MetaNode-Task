@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"MetaNode-Task/task-go/go_base/task-4-blog/models"
-	"MetaNode-Task/task-go/go_base/task-4-blog/repository"
-	"MetaNode-Task/task-go/go_base/task-4-blog/utils"
+	"MetaNode-Task/task/go_base/task-4-blog/models"
+	"MetaNode-Task/task/go_base/task-4-blog/repository"
+	"MetaNode-Task/task/go_base/task-4-blog/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
