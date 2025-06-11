@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
+//✅ 作业 1：ERC20 代币
 contract Mytoken {
     //记录转账操作事件
     event Transfer(address indexed from,  address indexed to, uint256  amount);

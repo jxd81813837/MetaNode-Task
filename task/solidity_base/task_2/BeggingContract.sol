@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 //合约地址 0x26bb001397d3170b914ef71439e052e6EE121dA9
 //发布地址 0x8aaCA58C897F28d2b0DedeBe63cB6eef03EA3E9B
 
+//✅ 作业3：编写一个讨饭合约
 contract BeggingContract is Ownable {
     //记录捐赠金额
     mapping(address=>uint256)  donates;

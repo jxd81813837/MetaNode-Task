@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-
+//✅ 作业2：在测试网上发行一个图文并茂的 NFT
 contract JxdNFT is ERC721 {
 
     //浏览器查看:https://sepolia.etherscan.io/tx/0x20da031277b78833201e5b73d90a81b03d2618fe080d31ca78aa3ed1037dfce4
